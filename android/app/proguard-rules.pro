@@ -6,9 +6,8 @@
 -keep class com.hive.** { *; }
 -keep class * extends com.hive.** { *; }
 
-# WorkManager
+# WorkManager (AndroidX)
 -keep class androidx.work.** { *; }
--keep class be.tramckrijte.workmanager.** { *; }
 
 # flutter_local_notifications
 -keep class com.dexterous.** { *; }

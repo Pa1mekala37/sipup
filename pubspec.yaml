@@ -21,9 +21,6 @@ dependencies:
   # Notifications
   flutter_local_notifications: ^17.2.2
 
-  # Background Work
-  workmanager: ^0.5.2
-
   # Charts
   fl_chart: ^0.69.0
 
