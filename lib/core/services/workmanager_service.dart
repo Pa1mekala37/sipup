@@ -19,7 +19,7 @@ import 'notification_service.dart';
 void callbackDispatcher() {
   Workmanager().executeTask((taskName, inputData) async {
     try {
-      await HiveFlutter.initFlutter();
+      await Hive.initFlutter();
       if (!Hive.isAdapterRegistered(HiveKeys.userProfileTypeId)) {
         Hive.registerAdapter(UserProfileModelAdapter());
         Hive.registerAdapter(WaterLogModelAdapter());

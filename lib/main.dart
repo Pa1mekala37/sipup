@@ -29,7 +29,7 @@ void main() async {
   );
 
   // Hive
-  await HiveFlutter.initFlutter();
+  await Hive.initFlutter();
   _registerHiveAdapters();
   await _openHiveBoxes();
 
