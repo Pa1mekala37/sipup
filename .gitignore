@@ -1,0 +1,31 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+*.lock
+build/
+*.g.dart
+!lib/data/models/*.g.dart
+
+# Android
+android/local.properties
+local.properties
+android/.gradle/
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+android/key.properties
+**/*.keystore
+**/*.jks
+
+# IntelliJ / Android Studio
+*.iml
+.idea/
+.gradle/
+local.properties
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/

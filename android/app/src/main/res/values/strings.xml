@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SipUp</string>
+    <string name="notification_channel_name">Hydration Reminders</string>
+    <string name="notification_channel_desc">Scheduled water intake reminders</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Splash screen: same 3-stop gradient as the icon background.
+  The Dart splash screen (SplashScreen widget) renders on top,
+  so this is only visible for the first ~200ms while Flutter loads.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rich gradient background (matches icon exactly) -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#0D1B6E"
+                android:centerColor="#1565C0"
+                android:endColor="#0097B2" />
+        </shape>
+    </item>
+
+</layer-list>
