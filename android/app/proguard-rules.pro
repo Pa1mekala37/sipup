@@ -15,6 +15,9 @@
 # Our app classes
 -keep class com.pavanmekala.water_reminder.** { *; }
 
+# Play Core split-install (referenced by Flutter engine; not used in standard APK builds)
+-dontwarn com.google.android.play.core.**
+
 # General
 -dontwarn sun.misc.**
 -keepattributes *Annotation*
