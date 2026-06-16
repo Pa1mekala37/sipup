@@ -1,8 +1,8 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import '../../domain/entities/reminder.dart';
+import 'timezone_helper.dart';
 
 class NotificationService {
   NotificationService._();
@@ -25,7 +25,7 @@ class NotificationService {
 
     // Initialize timezone data
     tz.initializeTimeZones();
-    final timezoneName = await FlutterTimezone.getLocalTimezone();
+    final timezoneName = await TimezoneHelper.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(timezoneName));
 
     // Use the monochrome notification icon (white drop silhouette)

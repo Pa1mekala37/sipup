@@ -2,7 +2,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:workmanager/workmanager.dart';
 import '../../core/constants/app_constants.dart';
 import '../../core/constants/hive_keys.dart';
@@ -14,6 +13,7 @@ import '../../data/models/water_log_model.dart';
 import '../../data/repositories/reminder_repository_impl.dart';
 import '../../domain/entities/user_profile.dart';
 import 'notification_service.dart';
+import 'timezone_helper.dart';
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
@@ -50,10 +50,10 @@ void callbackDispatcher() {
 }
 
 Future<void> _rescheduleReminders(LocalDataSource ds) async {
-  // Initialize timezone
+  // Initialize timezone (uses SharedPreferences cache in background isolate)
   tz.initializeTimeZones();
   try {
-    final timezoneName = await FlutterTimezone.getLocalTimezone();
+    final timezoneName = await TimezoneHelper.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(timezoneName));
   } catch (_) {
     tz.setLocalLocation(tz.UTC);
